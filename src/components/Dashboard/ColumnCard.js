@@ -1,5 +1,5 @@
 import React from "react";
-import Draggable from "./Draggable";
+import Draggable from "../UI/Draggable";
 import "./ColumnCard.css";
 
 export default function ColumnCard(props) {

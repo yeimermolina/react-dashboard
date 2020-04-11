@@ -11,6 +11,7 @@ const ModalOverlay = props => {
       <header className={`modal__header ${props.headerClass}`}>
         <h2>{props.header}</h2>
       </header>
+      <div className="modal__content">{props.children}</div>
     </div>
   );
   return ReactDOM.createPortal(

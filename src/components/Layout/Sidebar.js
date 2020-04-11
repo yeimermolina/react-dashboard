@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AccessAlarm, Dashboard, ShowChart } from "@material-ui/icons";
+import { UIContext } from "../../shared/contexts/ui-context";
 import "./Sidebar.css";
 
 export default function Sidebar() {
-  const [show, setShow] = useState(true);
+  const { sidebarOpen, toggleSidebar } = useContext(UIContext);
 
-  const toggleSidebar = e => {
-    e.stopPropagation();
-    setShow(!show);
-  };
   return (
     <div
-      className={`sidebar ${show ? "sidebar--extended" : ""}`}
+      className={`sidebar ${sidebarOpen ? "sidebar--extended" : ""}`}
       onClick={toggleSidebar}
     >
       <ul className="sidebar__options">

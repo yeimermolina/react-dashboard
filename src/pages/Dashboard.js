@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Column from "../components/Column";
-import ColumnCard from "../components/ColumnCard";
+import Column from "../components/Dashboard/Column";
+import ColumnCard from "../components/Dashboard/ColumnCard";
 import "./Dashboard.css";
-import Button from "../components/Button";
-import Modal from "../components/Modal";
+import Button from "../components/UI/Button";
+import CreateCardModal from "../components/Dashboard/CreateCardModal";
 
 const CARDS = [
   {
@@ -85,9 +85,8 @@ export default function Dashboard() {
 
   return (
     <React.Fragment>
-      <Modal
+      <CreateCardModal
         show={showNewCardModal}
-        header="Hey!"
         onClick={() => setShowNewCardModal(false)}
       />
       <div className="dashboard-controls">

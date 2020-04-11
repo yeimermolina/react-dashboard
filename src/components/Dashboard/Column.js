@@ -1,6 +1,6 @@
 import React from "react";
 import { Resizable } from "re-resizable";
-import Droppable from "./Droppable";
+import Droppable from "../UI/Droppable";
 import "./Column.css";
 
 export default function Column(props) {
